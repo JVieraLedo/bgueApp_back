@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>bgueAdmin</title>
+    <!-- STYLES -->
+    <link rel="stylesheet" href="lib/css/main.min.css"/>
+    <!-- SCRIPTS -->
+    <script src="lib/js/main.min.js"></script>
+
+    <!-- Custom Scripts -->
+    <script type="text/javascript" src="js/dashboard.min.js"></script>
+</head>
+<body ng-app="bgueAdmin" ng-controller="IndexCtrl as vm">
+<div id="page-wrapper" ng-class="{'open': vm.toggle}" ng-cloak>
+
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper" ui-view="menu"></div>
+    <!-- End Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper">
+        <div class="page-content">
+
+            <!-- Header Bar -->
+            <div ui-view="header"></div>
+            <!-- End Header Bar -->
+
+            <!-- Main Content -->
+            <div ui-view="container"></div>
+            <!-- End Main Content -->
+
+        </div>
+    </div>
+    <!-- End Content Wrapper -->
+</div><!-- End Page Wrapper -->
+</body>
+</html>

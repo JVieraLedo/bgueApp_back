@@ -1,7 +1,7 @@
-# bgueAdmin bgueAdmin-angular
+# bgueAdmin bgue-admin-angular
 ## Responsive, bloat free, bootstrap powered admin style dashboard!
 
-bgueAdmin-angular is an AngularJS implementation of the bgueAdmin admin dashboard. 
+bgue-admin-angular is an AngularJS implementation of the bgueAdmin admin dashboard. 
 The dashboard uses a small number of modules to get you started.
 
 ## Usage
@@ -27,12 +27,12 @@ Continue developing the dashboard further by editing the `src` directory.
  into the specific location within the `dist` directory.
 
 #### Modules & Packages
-By default, bgueAdmin-angular includes 
+By default, bgue-admin-angular includes 
 [`ui.bootstrap`](http://angular-ui.github.io/bootstrap/), 
 [`ui.router`](https://github.com/angular-ui/ui-router) and 
 [`ngCookies`](https://docs.angularjs.org/api/ngCookies). 
 
-If you'd like to include any additional modules/packages not included with bgueAdmin-angular, 
+If you'd like to include any additional modules/packages not included with bgue-admin-angular, 
 add them to your `bower.json` file and then update the `src/index.html` file,
  to include them in the minified distribution output.
 

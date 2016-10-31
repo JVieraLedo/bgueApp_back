@@ -9,7 +9,7 @@ Check out a live example, in AngularJS!
 
 ## Current Framework Implementations
 
-* with AngularJS: [bgueAdmin-angular](https://github.com/rdash/bgueAdmin-angular)
+* with AngularJS: [bgue-admin-angular](https://github.com/rdash/bgue-admin-angular)
 * with jQuery: [rdash-jquery](https://github.com/rdash/rdash-jquery)
 
 ## Usage
