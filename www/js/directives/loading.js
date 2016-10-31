@@ -1,16 +1,16 @@
-/**
- * Loading Directive
- * @see http://tobiasahlin.com/spinkit/
- */
+(function (angular) {
+    'use strict';
 
-angular
-    .module('bgueAdmin')
-    .directive('rdLoading', rdLoading);
+    angular
+        .module('bgueAdmin')
+        .directive('rdLoading', rdLoading);
 
-function rdLoading() {
-    var directive = {
-        restrict: 'AE',
-        template: '<div class="loading"><div class="double-bounce1"></div><div class="double-bounce2"></div></div>'
-    };
-    return directive;
-};
+    function rdLoading() {
+        var directive = {
+            restrict: 'AE',
+            template: '<div class="loading"><div class="double-bounce1"></div><div class="double-bounce2"></div></div>'
+        };
+        return directive;
+    }
+
+})(window.angular);
