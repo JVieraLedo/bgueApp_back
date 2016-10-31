@@ -1,1 +1,1 @@
-angular.module('RDash', ['ui.bootstrap', 'ui.router', 'ngCookies']);
+angular.module('bgueAdmin', ['ui.bootstrap', 'ui.router', 'ngCookies']);

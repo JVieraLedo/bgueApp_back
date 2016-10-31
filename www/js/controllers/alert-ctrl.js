@@ -3,7 +3,7 @@
  */
 
 angular
-    .module('RDash')
+    .module('bgueAdmin')
     .controller('AlertsCtrl', ['$scope', AlertsCtrl]);
 
 function AlertsCtrl($scope) {

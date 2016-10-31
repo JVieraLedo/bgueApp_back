@@ -3,7 +3,7 @@
  */
 
 angular
-    .module('RDash')
+    .module('bgueAdmin')
     .directive('rdWidget', rdWidget);
 
 function rdWidget() {
@@ -17,4 +17,4 @@ function rdWidget() {
     function link(scope, element, attrs) {
         /* */
     }
-};
+}

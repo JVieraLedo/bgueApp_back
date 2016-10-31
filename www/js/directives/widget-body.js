@@ -3,7 +3,7 @@
  */
 
 angular
-    .module('RDash')
+    .module('bgueAdmin')
     .directive('rdWidgetBody', rdWidgetBody);
 
 function rdWidgetBody() {

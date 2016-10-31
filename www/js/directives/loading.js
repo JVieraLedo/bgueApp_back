@@ -4,7 +4,7 @@
  */
 
 angular
-    .module('RDash')
+    .module('bgueAdmin')
     .directive('rdLoading', rdLoading);
 
 function rdLoading() {
