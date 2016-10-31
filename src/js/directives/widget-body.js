@@ -1,7 +1,7 @@
 (function (angular) {
     'use strict';
     angular
-        .module('bgueAdmin')
+        .module('bgueAdmin.directives')
         .directive('rdWidgetBody', rdWidgetBody);
 
     function rdWidgetBody() {

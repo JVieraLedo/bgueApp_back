@@ -11,12 +11,12 @@ var gulp = require('gulp'),
     minifyHTML = require('gulp-htmlmin');
 
 var paths = {
-    scripts: 'www/js/**/*.*',
-    styles: 'www/less/**/*.*',
-    images: 'www/img/**/*.*',
-    templates: 'www/templates/**/*.html',
-    index: 'www/index.html',
-    bower_fonts: 'www/components/**/*.{ttf,woff,eof,svg}'
+    scripts: 'src/js/**/*.*',
+    styles: 'src/less/**/*.*',
+    images: 'src/img/**/*.*',
+    templates: 'src/templates/**/*.html',
+    index: 'src/index.html',
+    bower_fonts: 'src/components/**/*.{ttf,woff,eof,svg}'
 };
 
 /**
@@ -28,7 +28,7 @@ gulp.task('usemin', function() {
             js: [minifyJs(), 'concat'],
             css: [minifyCss({keepSpecialComments: 0}), 'concat']
         }))
-        .pipe(gulp.dest('dist/'));
+        .pipe(gulp.dest('www/'));
 });
 
 /**
@@ -41,7 +41,7 @@ gulp.task('copy-bower_fonts', function() {
         .pipe(rename({
             dirname: '/fonts'
         }))
-        .pipe(gulp.dest('dist/lib'));
+        .pipe(gulp.dest('www/lib'));
 });
 
 /**
@@ -51,26 +51,26 @@ gulp.task('build-custom', ['custom-images', 'custom-js', 'custom-less', 'custom-
 
 gulp.task('custom-images', function() {
     return gulp.src(paths.images)
-        .pipe(gulp.dest('dist/img'));
+        .pipe(gulp.dest('www/img'));
 });
 
 gulp.task('custom-js', function() {
     return gulp.src(paths.scripts)
         .pipe(minifyJs())
         .pipe(concat('dashboard.min.js'))
-        .pipe(gulp.dest('dist/js'));
+        .pipe(gulp.dest('www/js'));
 });
 
 gulp.task('custom-less', function() {
     return gulp.src(paths.styles)
         .pipe(less())
-        .pipe(gulp.dest('dist/css'));
+        .pipe(gulp.dest('www/css'));
 });
 
 gulp.task('custom-templates', function() {
     return gulp.src(paths.templates)
         .pipe(minifyHTML())
-        .pipe(gulp.dest('dist/templates'));
+        .pipe(gulp.dest('www/templates'));
 });
 
 /**
@@ -89,15 +89,15 @@ gulp.task('watch', function() {
  */
 gulp.task('webserver', function() {
     connect.server({
-        root: 'dist',
+        root: 'www',
         livereload: true,
         port: 8888
     });
 });
 
 gulp.task('livereload', function() {
-    gulp.src(['dist/**/*.*'])
-        .pipe(watch(['dist/**/*.*']))
+    gulp.src(['www/**/*.*'])
+        .pipe(watch(['www/**/*.*']))
         .pipe(connect.reload());
 });
 

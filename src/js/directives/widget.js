@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('bgueAdmin')
+        .module('bgueAdmin.directives')
         .directive('rdWidget', rdWidget);
 
     function rdWidget() {
