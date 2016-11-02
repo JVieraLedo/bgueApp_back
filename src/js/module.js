@@ -16,9 +16,3 @@
         .module('bgueAdmin.controllers', []);
 
 })(window.angular);
-
-
-// angular
-//     .module('bgueAdmin',
-//         ['ui.bootstrap', 'ui.router', 'ngCookies']
-//     );

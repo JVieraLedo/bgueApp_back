@@ -1,8 +1,11 @@
 (function (angular) {
     'use strict';
 
-    angular.module('bgueAdmin')
-        .controller('MainCtrl', ['$scope', '$cookieStore', MainCtrl]);
+    angular
+        .module('bgueAdmin')
+        .controller('MainCtrl', MainCtrl);
+
+    MainCtrl.$inject = ['$scope', '$cookieStore'];
 
     function MainCtrl($scope, $cookieStore) {
         var vm = this;

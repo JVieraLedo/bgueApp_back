@@ -2,7 +2,9 @@
     'use strict';
 
     angular.module('bgueAdmin')
-        .controller('IndexCtrl', ['$scope', '$cookieStore', '$window', IndexCtrl]);
+        .controller('IndexCtrl', IndexCtrl);
+    
+    IndexCtrl.$inject = ['$scope', '$cookieStore', '$window'];
 
     function IndexCtrl($scope, $cookieStore, window) {
         var vm = this;
