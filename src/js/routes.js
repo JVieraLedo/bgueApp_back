@@ -45,7 +45,7 @@ angular.module('bgueAdmin').config(['$stateProvider', '$urlRouterProvider',
                         controllerAs:'mainCtrl'
                     },
                     "container": {
-                        templateUrl: 'templates/dashboard.html',
+                        templateUrl: 'templates/tables.html',
                         controller:'MasterCtrl',
                         controllerAs:'masterCtrl'
                     }
