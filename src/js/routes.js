@@ -22,13 +22,13 @@
                         },
                         "header": {
                             templateUrl: 'templates/header.html',
-                            controller: 'MainCtrl',
-                            controllerAs: 'mainCtrl'
+                            controller: 'HeaderCtrl',
+                            controllerAs: 'headCtrl'
                         },
                         "container": {
                             templateUrl: 'templates/dashboard.html',
-                            controller: 'MasterCtrl',
-                            controllerAs: 'masterCtrl'
+                            controller: 'DashboardCtrl',
+                            controllerAs: 'dashCtrl'
                         }
                     }
                 })
@@ -42,13 +42,13 @@
                         },
                         "header": {
                             templateUrl: 'templates/header.html',
-                            controller: 'MainCtrl',
-                            controllerAs: 'mainCtrl'
+                            controller: 'HeaderCtrl',
+                            controllerAs: 'headCtrl'
                         },
                         "container": {
                             templateUrl: 'templates/tables.html',
-                            controller: 'MasterCtrl',
-                            controllerAs: 'masterCtrl'
+                            controller: 'ProductsCtrl',
+                            controllerAs: 'productCtrl'
                         }
                     }
                 });

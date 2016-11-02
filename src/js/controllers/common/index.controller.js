@@ -1,7 +1,7 @@
 (function (angular) {
     'use strict';
 
-    angular.module('bgueAdmin')
+    angular.module('bgueAdmin.controllers')
         .controller('IndexCtrl', IndexCtrl);
     
     IndexCtrl.$inject = ['$scope', '$cookieStore', '$window'];

@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('bgueAdmin')
+        .module('bgueAdmin.controllers')
         .controller('MenuCtrl', MenuCtrl);
 
     MenuCtrl.$inject = ['$scope', '$cookieStore', 'MENU'];
