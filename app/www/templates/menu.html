@@ -1,19 +1,13 @@
 <ul class="sidebar">
     <li class="sidebar-main">
-        <a ng-click="mainCtrl.toggleSidebar()">
-            Dashboard
+        <a href="" ng-click="menuCtrl.toggleSidebar()">
+            MENÚ
             <span class="menu-icon glyphicon glyphicon-transfer"></span>
         </a>
     </li>
-    <li class="sidebar-title"><span>NAVIGATION</span></li>
-    <li class="sidebar-list">
-        <a ui-sref="index">Dashboard <span class="menu-icon fa fa-tachometer"></span></a>
-    </li>
-    <li class="sidebar-list">
-        <a ui-sref="tables">Productos <span class="menu-icon fa fa-table"></span></a>
-    </li>
-    <li class="sidebar-list">
-        <a ui-sref="tables">Pedidos <span class="menu-icon fa fa-table"></span></a>
+    <li class="sidebar-title"><span>NAVEGACIÓN</span></li>
+    <li class="sidebar-list" ng-repeat="menu in menuCtrl.listMenu">
+        <a ui-sref="{{menu.sref}}">{{::menu.name}}<span class="menu-icon fa" ng-class="menu.icon"></span></a>
     </li>
 </ul>
 <div class="sidebar-footer">

@@ -17,8 +17,8 @@
                     views: {
                         "menu": {
                             templateUrl: 'templates/menu.html',
-                            controller: 'MainCtrl',
-                            controllerAs: 'mainCtrl'
+                            controller: 'MenuCtrl',
+                            controllerAs: 'menuCtrl'
                         },
                         "header": {
                             templateUrl: 'templates/header.html',
@@ -37,8 +37,8 @@
                     views: {
                         "menu": {
                             templateUrl: 'templates/menu.html',
-                            controller: 'MainCtrl',
-                            controllerAs: 'mainCtrl'
+                            controller: 'MenuCtrl',
+                            controllerAs: 'menuCtrl'
                         },
                         "header": {
                             templateUrl: 'templates/header.html',
@@ -53,5 +53,10 @@
                     }
                 });
         }
-    ])
+    ]);
+    angular.module('bgueAdmin').run(['$state',
+        function ($state) {
+            $state.go('index');
+        }
+    ]);
 })(window.angular);
