@@ -484,3 +484,8 @@ ul.sidebar .sidebar-list .menu-icon {
   font-size: 28px;
   display: block;
 }
+.hover-menu{
+  border-left: 3px solid #e99d1a !important;
+  color: #fff !important;
+  text-indent: 22px !important;
+}

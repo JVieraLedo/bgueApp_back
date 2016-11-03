@@ -4,11 +4,12 @@
     angular.module('bgueAdmin.controllers')
         .controller('IndexCtrl', IndexCtrl);
     
-    IndexCtrl.$inject = ['$scope', '$cookieStore', '$window'];
+    IndexCtrl.$inject = ['$scope', '$localStorage', '$window'];
 
-    function IndexCtrl($scope, $cookieStore, window) {
+    function IndexCtrl($scope, localStorage, window) {
         var vm = this;
         var mobileView = 992;
+        console.log(localStorage);
 
         vm.getWidth = function () {
             return window.innerWidth;
@@ -16,13 +17,23 @@
 
         $scope.$watch(vm.getWidth, function (newValue, oldValue) {
             if (newValue >= mobileView) {
-                if (angular.isDefined($cookieStore.get('toggle'))) {
-                    vm.toggle = !$cookieStore.get('toggle');
+                if (angular.isDefined(localStorage.toggle)) {
+                    vm.toggle = !localStorage.toggle;
+                    localStorage.$default({
+                        toggle: vm.toggle
+                    });
+                    $scope.$broadcast('hover-menu', { toggle: $scope.vm.toggle });
                 } else {
-                    vm.toggle = true;
+                    localStorage.$default({
+                        toggle: false
+                    });
                 }
             } else {
+                localStorage.$default({
+                    toggle: false
+                });
                 vm.toggle = false;
+                $scope.$broadcast('hover-menu', { toggle: $scope.vm.toggle });
             }
         });
 

@@ -9,6 +9,7 @@
                 'ui.bootstrap',
                 'ui.router',
                 'ngCookies',
+                'ngStorage',
                 'bgueAdmin.controllers']
         );
 
@@ -21,7 +22,7 @@
 
         .constant('MENU',
             [
-                {sref: 'index', name: 'Dashboard', icon:'fa-tachometer'},
+                {sref: 'dashboard', name: 'Dashboard', icon:'fa-tachometer'},
                 {sref: 'tables', name: 'Pedidos', icon:'fa-table'},
                 {sref: 'tables', name: 'Productos', icon:'fa-server'}
             ]

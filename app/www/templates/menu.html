@@ -7,7 +7,10 @@
     </li>
     <li class="sidebar-title"><span>NAVEGACIÓN</span></li>
     <li class="sidebar-list" ng-repeat="menu in menuCtrl.listMenu">
-        <a ui-sref="{{menu.sref}}">{{::menu.name}}<span class="menu-icon fa" ng-class="menu.icon"></span></a>
+        <a id="{{menu.name}}" ui-sref="{{menu.sref}}" hover>
+            {{::menu.name}}
+            <span class="menu-icon fa" ng-class="menu.icon" hover></span>
+        </a>
     </li>
 </ul>
 <div class="sidebar-footer">
