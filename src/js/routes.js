@@ -3,7 +3,9 @@
 /**
  * Route configuration for the bgueAdmin module.
  */
-angular.module('bgueAdmin').config(['$stateProvider', '$urlRouterProvider',
+angular
+    .module('bgueAdmin')
+    .config(['$stateProvider', '$urlRouterProvider',
     function ($stateProvider, $urlRouterProvider) {
 
         // For unmatched routes
@@ -45,7 +47,7 @@ angular.module('bgueAdmin').config(['$stateProvider', '$urlRouterProvider',
                         controllerAs:'mainCtrl'
                     },
                     "container": {
-                        templateUrl: 'templates/dashboard.html',
+                        templateUrl: 'templates/tables.html',
                         controller:'MasterCtrl',
                         controllerAs:'masterCtrl'
                     }
