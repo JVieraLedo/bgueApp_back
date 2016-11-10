@@ -9,7 +9,6 @@
     function IndexCtrl($scope, localStorage, window) {
         var vm = this;
         var mobileView = 992;
-        console.log(localStorage);
 
         vm.getWidth = function () {
             return window.innerWidth;
