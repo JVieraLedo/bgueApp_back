@@ -5,17 +5,25 @@
         .module('bgueAdmin.controllers')
         .controller('DashboardCtrl', DashboardCtrl);
 
-    DashboardCtrl.$inject = ['$scope', '$cookieStore', 'dataService'];
+    DashboardCtrl.$inject = ['$scope', '$filter', 'dataService'];
 
-    function DashboardCtrl($scope, $cookieStore, dataService) {
-        var vm = this;
+    function DashboardCtrl($scope, $filter, dataService) {
+        var vm = $scope;
+
+        vm.orders = [];
 
         dataService.getDataBBDD('orders').then(
             function (response) {
-                vm.orders = response.val();
-                console.log(vm.orders);
+                var orders = [];
+                Object.keys(response.val()).forEach(function(key) {
+                    orders.push({key: key, value: response.val()[key]});
+                });
+                $scope.orders = orders;
+                console.log($scope.orders);
             }
         );
+
+
         
     }
 
