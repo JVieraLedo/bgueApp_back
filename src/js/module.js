@@ -9,16 +9,23 @@
                 'ui.bootstrap',
                 'ui.router',
                 'ngCookies',
+                'ngStorage',
                 'bgueAdmin.controllers']
         );
+
 
     angular
         .module('bgueAdmin.controllers', []);
 
+    angular
+        .module('bgueAdmin')
+
+        .constant('MENU',
+            [
+                {sref: 'dashboard', name: 'Dashboard', icon:'fa-tachometer'},
+                {sref: 'tables', name: 'Pedidos', icon:'fa-table'},
+                {sref: 'tables', name: 'Productos', icon:'fa-server'}
+            ]
+        );
+
 })(window.angular);
-
-
-// angular
-//     .module('bgueAdmin',
-//         ['ui.bootstrap', 'ui.router', 'ngCookies']
-//     );
