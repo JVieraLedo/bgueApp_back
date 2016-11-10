@@ -10,12 +10,17 @@
                 'ui.router',
                 'ngCookies',
                 'ngStorage',
-                'bgueAdmin.controllers']
+                'firebase',
+                'bgueAdmin.controllers',
+                'bgueAdmin.services']
         );
 
 
     angular
         .module('bgueAdmin.controllers', []);
+
+    angular
+        .module('bgueAdmin.services', []);
 
     angular
         .module('bgueAdmin')
